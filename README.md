@@ -3,12 +3,14 @@
 The iOS mobile application contains two sample Augemented Reality (AR) applicationse discussed in the thesis: 
 	
 	Comprehensive Learning Sample:
-		This sample visualize an 3D representation of a T-Rex texture. In addition, this sample respects the distance betwwen users and the rendered model, and use
-		that distance as a trigger for playing multimedia contents (T-Rex roar sound effect in this case).
+		This sample visualize an 3D representation of a T-Rex texture. In addition, this sample respects the
+		distance betwwen users and the rendered model, and use that distance as a trigger for playing
+		multimedia contents (T-Rex roar sound effect in this case).
 
 	Confidential Information Exchange Sample:
-		This sample provides an example scenario where user ID and electronic content can be encrypted within a QR Code marker. Only user with appropriate authorization
-		is able to view the electronic content associated with the encrypted user ID. In this sample, a music video acts an electronic content.
+		This sample provides an example scenario where user ID and electronic content can be encrypted within
+		a QR Code marker. Only user with appropriate authorizatio is able to view the electronic content 
+		associated with the encrypted user ID. In this sample, a music video acts an electronic content.
 
 
 ## How To Run

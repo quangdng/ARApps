@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SNa-iq-MDT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5Co-TL-oii">
+            <objects>
+                <navigationController id="SNa-iq-MDT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tt2-cF-3tf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="H2Q-b6-pwh" kind="relationship" relationship="rootViewController" id="ENM-hD-ba1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvL-pd-JoV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-461" y="102"/>
+        </scene>
+        <!--ARApps-->
+        <scene sceneID="cgx-aG-O5b">
+            <objects>
+                <viewController id="H2Q-b6-pwh" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qIs-AK-wx5"/>
+                        <viewControllerLayoutGuide type="bottom" id="sVQ-o5-62E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B5b-Tt-vHp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4N-Qo-pbd" customClass="BButton">
+                                <rect key="frame" x="155" y="134" width="291" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="BQs-C9-eBv"/>
+                                    <constraint firstAttribute="width" constant="291" id="fiW-Wp-Jrd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Comprehensive Learning">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Ama-iN-11u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZU-i3-N1a" customClass="BButton">
+                                <rect key="frame" x="155" y="230" width="291" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="vhP-pJ-hI8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Information Exchange">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5PX-8j-wb2" kind="show" id="Hwf-hO-P0j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GZU-i3-N1a" firstAttribute="centerX" secondItem="B5b-Tt-vHp" secondAttribute="centerX" id="BxR-Ub-cmh"/>
+                            <constraint firstItem="GZU-i3-N1a" firstAttribute="trailing" secondItem="i4N-Qo-pbd" secondAttribute="trailing" id="JGC-IB-u4q"/>
+                            <constraint firstItem="i4N-Qo-pbd" firstAttribute="top" secondItem="qIs-AK-wx5" secondAttribute="bottom" constant="70" id="RIG-3b-gNI"/>
+                            <constraint firstItem="i4N-Qo-pbd" firstAttribute="leading" secondItem="GZU-i3-N1a" secondAttribute="leading" id="XIL-at-ETJ"/>
+                            <constraint firstItem="GZU-i3-N1a" firstAttribute="top" secondItem="i4N-Qo-pbd" secondAttribute="bottom" constant="32" id="dSd-JH-ivf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ARApps" id="a0N-Yw-QxX"/>
+                    <connections>
+                        <outlet property="TRex" destination="i4N-Qo-pbd" id="wWd-15-NGx"/>
+                        <outlet property="infoEx" destination="GZU-i3-N1a" id="TTa-2j-rnW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6HL-7c-qsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293" y="102"/>
+        </scene>
+        <!--TRex Example-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="TRex Example" id="BYZ-38-t0r" customClass="TextureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vHB-t4-qEF"/>
+                        <viewControllerLayoutGuide type="bottom" id="xjg-P9-YL1"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" drawableDepthFormat="24" enableSetNeedsDisplay="NO" id="mBK-Wr-GpH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eb5-JE-8bN">
+                                <rect key="frame" x="537" y="523" width="30" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftRotate:" destination="BYZ-38-t0r" eventType="touchDown" id="WzK-1C-TGN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezc-qN-E4p">
+                                <rect key="frame" x="499" y="523" width="30" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightRotate:" destination="BYZ-38-t0r" eventType="touchDown" id="9s8-Tm-LTn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ezc-qN-E4p" firstAttribute="baseline" secondItem="Eb5-JE-8bN" secondAttribute="baseline" id="3Bt-cI-TKt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Eb5-JE-8bN" secondAttribute="trailing" constant="17" id="6bI-0b-Ldm"/>
+                            <constraint firstItem="Eb5-JE-8bN" firstAttribute="leading" secondItem="ezc-qN-E4p" secondAttribute="trailing" constant="8" symbolic="YES" id="S73-ok-F3z"/>
+                            <constraint firstItem="xjg-P9-YL1" firstAttribute="top" secondItem="ezc-qN-E4p" secondAttribute="bottom" constant="17" id="WDD-qY-xIu"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="kJO-Kb-Av6"/>
+                        </connections>
+                    </glkView>
+                    <connections>
+                        <outlet property="glkView" destination="mBK-Wr-GpH" id="tJ4-SC-Y6g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="102"/>
+        </scene>
+        <!--Information Exchange Example-->
+        <scene sceneID="Ssk-Ac-yPz">
+            <objects>
+                <viewController title="Information Exchange Example" id="5PX-8j-wb2" customClass="RevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ccv-sO-Fc1"/>
+                        <viewControllerLayoutGuide type="bottom" id="U45-o0-kru"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" drawableDepthFormat="24" enableSetNeedsDisplay="NO" id="IYB-Oy-93f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="5PX-8j-wb2" id="ThB-bG-8o0"/>
+                        </connections>
+                    </glkView>
+                    <connections>
+                        <outlet property="glkView" destination="IYB-Oy-93f" id="3Mh-ZE-5Mi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wxl-2j-Fks" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="864"/>
+        </scene>
+    </scenes>
+</document>
